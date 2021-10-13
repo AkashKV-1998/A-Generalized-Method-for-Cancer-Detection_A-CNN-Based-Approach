@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/uplod.css') }}">
+    <body>
+      <div style="background-image: url('static/images/a1.jpg');"></div>
+    </body>
+<div class="header-container-wrapper">
+    <div class="header-container">
+      <div class="custom-header-bg">
+        <div class="page-center">
+          
+          <div class="logo"><strong>Cancer Detection</strong> </div>
+          
+          <div class="navigation">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="body-container-wrapper">
+    <div class="body-container">
+      <div class="page-center">
+        
+        <style>
+          * {
+            box-sizing: border-box;
+          }
+          
+          .column {
+            float: left;
+            width: 33.33%;
+            padding: 4px;
+          }
+          
+          /* Clearfix (clear floats) */
+          .row::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+          </style>
+          </head>
+          <body>
+          
+          <div class="row">
+            <div class="column">
+              <a href="samples1" value="lung1"><img src="{{ url_for('static', filename='images/L1.jpeg') }}" alt="lung" style="width:100px;height:100px;"></a>
+            </div>
+            <div class="column">
+              <a href="samples2" value="lung2"><img src="{{ url_for('static', filename='images/L2.jpeg') }}"  alt="lung" style="width:100px;height:100px;"></a>
+            </div>
+            <div class="column">
+              <a href="samples3" value="brain1"><img src="{{ url_for('static', filename='images/B1.jpeg') }}"  alt="brain" style="width:100px;height:100px;"></a>
+            </div>
+            <div class="column">
+              <a href="samples4" value="skin1"><img src="{{ url_for('static', filename='images/S1.jpg') }}"  alt="skin" style="width:100px;height:100px;"></a>
+            </div>
+          </div>
+
+          <label><strong>Try sample images for testing</strong></label>
+          <br>
+
+  
+        
+
+        <h1>Upload Your <strong>Image</strong> To cancer detecter</h1>
+        <form action="/upload-image" method="post" enctype="multipart/form-data">	
+				<div class="form-group">
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" name="image" id="image">
+						<label class="custom-file-label" for="image">choose image...</label>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Upload</button>
+		    </form>
+
+          <label><strong>MODEL SELECTION:</strong></label>
+          <form id="form1" action="/models" method="POST" enctype="multipart/form-data">
+            <select id="cancertype" class="custom-select sources"  name = "cancertype">
+              <option value="noselect">Select here..</option>
+              <option value="sc">Skin Cancer-M1</option>
+              <option value="bc">Brain Cancer-M2</option>
+              <option value="combined">Combined-(M1 & M2)</option>
+              <option value="mri">Generalized Model</option>
+            </select>
+            <input type="submit" class="form-control" value="Select">
+          </form>
+          <div id="result">
+            {% if types is defined %}
+                 {{ types }}
+            {% endif %}
+          </div>
+
+          
+          <br>
+          <a href="result" class="upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i>TEST</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="footer-container-wrapper">
+    <div class="footer-container">
+      <div class="custom-footer-bg">
+        <div class="page-center">
+          <p>AKASH KALLUVILAYIL VENUGOPALAN, SREEDEV D, VISHNU MOHAN</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </html>
+  
