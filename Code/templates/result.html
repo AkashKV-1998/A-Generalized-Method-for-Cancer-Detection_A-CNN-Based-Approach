@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Cancer Detection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
+	</head>
+	<body class="is-preload">						
+					
+				
+</div>
+			
+			
+	
+<!-- Wrapper -->
+<div id="wrapper">
+
+	
+	<h1>Cancer Detection And Segmentation</h1>
+	<br>
+	<br>
+	
+
+	<style>
+ 
+ 	td {
+        width: 150px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+      	}
+	</style>
+
+	<table>
+	<thead>
+	<tr>
+		<th><center>Result</center></th>
+		<th><center>Area of Cancer</center></th>
+		<th><center>Prediction Accuracy</center></th>
+	</tr>
+	</thead>    
+	<tbody>
+		<tr>
+			<td>{{ result }}</td>
+			<td>{{ area }}</td>
+			<td>{{ accuracy }}</td>
+		</tr>
+	</tbody>
+	</table>
+
+   <br>
+   <label>MRI DATA RESULT</label>
+   <br>
+   <p>...Future Scope...</p>						
+</div>
+
+<!-- Footer -->
+	<footer id="footer">
+		<p class="copyright"> Team 8</p> AKASH KALLUVILAYIL VENUGOPALAN, SREEDEV D, VISHNU MOHAN</p>
+	</footer>
+
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+
+<!-- Scripts -->
+  <script type=text/javascript src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='js/util.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  </body>
+</html>
